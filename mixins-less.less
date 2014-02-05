@@ -1,0 +1,105 @@
+#Fonts {
+  .font-12 (@weight: normal, @size: 12px) {
+    font-weight: @weight;
+    font-size: @size;
+  }
+  .font(@family: arial, @size: 12px) {
+	  font-family: @family;
+	  font-size: @size;
+	}
+}
+
+#Relative {
+    .top-right(@top, @right) {
+            position: relative;
+            top: @top;
+            right: @right;
+    }
+    .top-left(@top, @left) {
+            position: relative;
+            top: @top;
+            left: @left;
+    }
+}
+
+#Borders {
+	.borders(@width: 1px, @style: solid, @color: #333) {
+		border: @width @style @color;
+	}
+	.border-bottom(@width: 1px, @style: solid, @color: #333) {
+		border-bottom: @width @style @color;
+	}
+}
+
+.border-radius (@radius) {
+    -moz-border-radius: @radius; 
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+    -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+    -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+    border-radius: @topleft @topright @bottomright @bottomleft;
+}
+
+.box-sizing (@type: border-box) {
+    -webkit-box-sizing: @type;
+    -moz-box-sizing:    @type;
+    box-sizing:         @type;
+}
+
+.box-shadow(@shadows) {
+    -webkit-box-shadow: @shadows;
+    -moz-box-shadow: @shadows;
+    box-shadow: @shadows;
+}
+
+.opacity (@opacity: 0) {
+    -webkit-opacity: @opacity;
+    -moz-opacity: @opacity;
+    opacity: @opacity;
+    @freaking-ie: @opacity;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{freaking-ie})";
+    filter: alpha(opacity=@freaking-ie);
+}
+
+.font-line-height {
+	font-weight: normal;
+	line-height: normal;
+}
+
+.size100(@width-2: 100%, @height-2:100%) {
+	width: @width-2;
+	height: @height-2;
+}
+
+.border(@color: @border-color) {
+  border: 1px solid @color;
+}
+.border-left(@color: @border-color) {
+      border-left: 1px solid @color;
+}
+.border-right(@color: @border-color) {
+  border-right: 1px solid @color;
+}
+.border-top(@color: @border-color) {
+  border-top: 1px solid @color;
+}
+.border-bottom(@color: @border-color) {
+  border-bottom: 1px solid @color;
+}
+
+.top-right(@top, @right) {
+    top: @top;
+    right: @right;
+}
+.top-left(@top, @left) {
+    top: @top;
+    left: @left;
+}
+
+.zero-mp {
+    margin: 0;
+    padding: 0;
+}
